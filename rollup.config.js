@@ -1,11 +1,14 @@
 export default {
-    format: 'umd',
-    moduleName: 'ng2-select2',
+    context: 'window',
+    output: {
+        format: 'umd',
+        name: 'ng2-select2',
+        globals: {
+            '@angular/core': 'ng.core',
+        }
+    },
     external: [
         '@angular/core',
         '@angular/common'
     ],
-    globals: {
-        '@angular/core': 'ng.core',
-    }
 };
